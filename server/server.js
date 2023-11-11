@@ -2,11 +2,13 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
-// const { MongoClient, ServerApiVersion } = require('mongodb');
 const cookieParser = require("cookie-parser"); 
-const bodyParser = require('body-parser');
+const session = require('express-session')
+// const bodyParser = require('body-parser');
 const router = require("./routes/router");
-
+const Redis = require("ioredis");
+const RedisStore = require("connect-redis").default;
+const clientRedis= new Redis();
 module.exports = {
     start() {
         const app = express();
@@ -15,7 +17,19 @@ module.exports = {
 
         mongoose.connect(process.env.mongoDB);
 
-        
+        app.set('trust proxy', 1)
+        app.use(session({
+          secret: process.env.sessionKey,
+          resave: false,
+          saveUninitialized: true,
+          store: new RedisStore({
+            client: clientRedis,
+          }),
+          cookie: { 
+            secure: false,
+            httpOnly: true,
+          }
+        }))
         // app.use(bodyParser.urlencoded({ extended: false }));
         // app.use(bodyParser.json())
         app.use(cors());

@@ -1,0 +1,108 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "test session",
+    "dateExported": "2023-11-11T14:46:34.364Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1b56291d-3f0e-4dac-9c49-bc2128eedd97",
+            "colId": "bdaeb692-99da-463b-9d5a-57010200e9ab",
+            "containerId": "",
+            "name": "register",
+            "url": "http://localhost:8000/auth/register-jwt",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-11T14:14:19.806Z",
+            "modified": "2023-11-11T14:14:19.806Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"test\",\n  \"email\": \"test@gmail.com\",\n  \"password\": \"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2462fad0-7349-49e8-8038-0fceae75a58b",
+            "colId": "bdaeb692-99da-463b-9d5a-57010200e9ab",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:8000/auth/login-session",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-11T14:14:19.807Z",
+            "modified": "2023-11-11T14:16:52.606Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"test\",\n  \"password\": \"123456789\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a5c83964-681c-4e7c-9ad5-d97a322b0849",
+            "colId": "bdaeb692-99da-463b-9d5a-57010200e9ab",
+            "containerId": "",
+            "name": "getAllusers",
+            "url": "http://localhost:8000/user/session",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-11T14:14:19.808Z",
+            "modified": "2023-11-11T14:23:38.461Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRmNTE1Y2Q4ZTY3ZWEwZmFkMWIxYzYiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJjcmVhdGVkQXQiOiIyMDIzLTExLTExVDEwOjAzOjA4LjU2MFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTExLTExVDEyOjQ3OjA1LjE1MFoiLCJfX3YiOjAsImlhdCI6MTY5OTcwNzA3MSwiZXhwIjoxNjk5NzA4ODcxfQ.TLQM-m8VdaBzKZwYfK-ohu-3E_ayedyjq_ur5we9oXI"
+            },
+            "tests": []
+        },
+        {
+            "_id": "22460f3c-6df8-43a4-9c34-183c5f26fca4",
+            "colId": "bdaeb692-99da-463b-9d5a-57010200e9ab",
+            "containerId": "",
+            "name": "delete user",
+            "url": "http://localhost:8000/user/session/654f515cd8e67ea0fad1b1c6",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-11T14:14:19.809Z",
+            "modified": "2023-11-11T14:38:21.097Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRjNjk4ZjA0ZDNjNDEyZjNhNWQ1ZTEiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJjcmVhdGVkQXQiOiIyMDIzLTExLTA5VDA1OjA5OjM1LjM4MFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTExLTExVDA2OjE5OjM3LjY4MVoiLCJfX3YiOjAsImlhdCI6MTY5OTY4Mzc2OCwiZXhwIjoxNjk5Njg0MDY4fQ.20QSBOrzaGtkMKNe5tbVkHHGpDGOtkNkQCKZMnFGmpQ",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRjNjk4ZjA0ZDNjNDEyZjNhNWQ1ZTEiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJjcmVhdGVkQXQiOiIyMDIzLTExLTA5VDA1OjA5OjM1LjM4MFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTExLTExVDA3OjM1OjQyLjQ0M1oiLCJfX3YiOjAsImlhdCI6MTY5OTY4OTA5OSwiZXhwIjoxNjk5NjkwODk5fQ.Lcq6wCUbTGJMMoNMPANmio6Zd9ty-RtlmD-mIlbEhhU"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c4ef1be0-4f1e-4db4-a344-1e5ba46df609",
+            "colId": "bdaeb692-99da-463b-9d5a-57010200e9ab",
+            "containerId": "",
+            "name": "logout",
+            "url": "http://localhost:8000/auth/logout",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-11-11T14:14:19.811Z",
+            "modified": "2023-11-11T14:14:19.811Z",
+            "headers": [
+                {
+                    "name": "Cookie",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRjNjk4ZjA0ZDNjNDEyZjNhNWQ1ZTEiLCJ1c2VybmFtZSI6InRlc3QiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwidHlwZSI6InVzZXIiLCJjcmVhdGVkQXQiOiIyMDIzLTExLTA5VDA1OjA5OjM1LjM4MFoiLCJ1cGRhdGVkQXQiOiIyMDIzLTExLTA5VDE0OjE3OjQ1Ljg0M1oiLCJfX3YiOjAsImlhdCI6MTY5OTUzOTU1NCwiZXhwIjoxNzAwNDAzNTU0fQ.B22kZQFrUkN00Z3CZ_L6gyEKlmpHkbNdeNagDWunY9Q"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
